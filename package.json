@@ -3,7 +3,7 @@
   "displayName": "Window Colors",
   "description": "Automatically adds a unique color to each window's activityBar and titleBar.",
   "icon": "img/icon_602.png",
-  "version": "1.0.50",
+  "version": "1.0.51",
   "publisher": "stuart",
   "author": {
     "name": "Stuart Robinson"
@@ -76,14 +76,15 @@
     "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "typescript": "^2.6.1",
-    "vscode": "^1.1.22",
-    "tslint": "^5.8.0",
-    "@types/node": "^8.10.25",
-    "@types/mocha": "^2.2.42"
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.16",
+    "tslint": "^5.20.1",
+    "typescript": "^5.3.3",
+    "vscode": "^1.1.22"
   },
   "dependencies": {
-    "@types/color": "^3.0.0",
-    "color": "^3.1.0"
+    "@types/color": "^3.0.6",
+    "@vscode/vsce": "^2.23.0",
+    "color": "^4.2.3"
   }
 }
