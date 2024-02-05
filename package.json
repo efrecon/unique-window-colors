@@ -27,7 +27,7 @@
     "customization"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./out/extension",
   "contributes": {
