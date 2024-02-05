@@ -1,5 +1,7 @@
 # Window Colors
 
+Forked from https://github.com/stuartcrobinson/unique-window-colors
+
 Uniquely and automatically colors each VSCode window.
 
 <img src="https://raw.githubusercontent.com/stuartcrobinson/unique-window-colors/master/img/live_dark_screenshot.png" alt="drawing" width="330"/> &nbsp;&nbsp;&nbsp;
