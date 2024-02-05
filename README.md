@@ -2,7 +2,7 @@
 
 Forked from https://github.com/stuartcrobinson/unique-window-colors
 
-To install, run `yarn pack`to package the extension into a _.vsix_ file. Then, in VS Code, open the "Extensions" tab, click on the three dots in the top right corner, click on "Install from VSIX..." and select the file you just created.
+To install, run `yarn pack` to package the extension into a _.vsix_ file. Then, in VS Code, open the "Extensions" tab, click on the three dots in the top right corner, click on "Install from VSIX..." and select the file you just created.
 
 Uniquely and automatically colors each VSCode window.
 
