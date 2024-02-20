@@ -27,7 +27,7 @@ jobs:
           yarn install --non-interactive
           yarn pack
           yarn add @vscode/vsce
-          vsce package --yarn
+          yarn vsce package --yarn
           vsix=$(find . -name '*.vsix' -type f | head -n 1)
           printf VSIX=%s\\n "$vsix" >> $GITHUB_OUTPUT
       -
