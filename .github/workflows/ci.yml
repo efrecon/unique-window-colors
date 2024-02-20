@@ -19,13 +19,14 @@ jobs:
         name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
       -
         name: Build
         id: build
         run: |
           yarn pack
           npm install -y -g @vscode/vsce
+          npm install -y
           vsce package --yarn
           vsix=$(find . -name '*.vsix' -type f | head -n 1)
           printf VSIX=%s\\n "$vsix" >> $GITHUB_OUTPUT
