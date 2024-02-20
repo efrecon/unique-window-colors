@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  vsix:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout this repository.
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      -
+        name: Build
+        id: build
+        run: |
+          yarn install --non-interactive
+          yarn pack
+          yarn add @vscode/vsce
+          yarn vsce package --yarn
+          vsix=$(find . -name '*.vsix' -type f | head -n 1)
+          printf VSIX=%s\\n "$vsix" >> $GITHUB_OUTPUT
+      -
+        name: VSIX
+        id: vsix
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsix
+          path: ${{ steps.build.outputs.VSIX }}
