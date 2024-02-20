@@ -24,9 +24,9 @@ jobs:
         name: Build
         id: build
         run: |
+          yarn install --non-interactive
           yarn pack
-          npm install -y -g @vscode/vsce
-          npm install -y
+          yarn add @vscode/vsce
           vsce package --yarn
           vsix=$(find . -name '*.vsix' -type f | head -n 1)
           printf VSIX=%s\\n "$vsix" >> $GITHUB_OUTPUT
